@@ -23,3 +23,33 @@ arrays/ActiveSelection.java
  arrays.ActiveSelection
  arrays.ActiveSelection$Activity
  arrays.ActiveSelection$Ballon
+strings/FindAll.java
+ strings.FindAll
+strings/Space20.java
+ strings.Space20
+strings/Tokenisation.java
+ strings.Tokenisation
+strings/CheckSubsetString.java
+ strings.CheckSubsetString
+strings/SortSubsequences.java
+ strings.SortSubsequences
+strings/DigitalClock.java
+ strings.DigitalClock
+strings/RunLengthEncoding.java
+ strings.RunLengthEncoding
+strings/BreakPalindrome.java
+ strings.BreakPalindrome
+strings/Normalisation.java
+ strings.Normalisation
+slidingwindow/MaximumSumSubArray.java
+ slidingwindow.MaximumSumSubArray
+slidingwindow/FirstNegativeNumber.java
+ slidingwindow.FirstNegativeNumber
+slidingwindow/Anagrams.java
+ slidingwindow.Anagrams
+slidingwindow/MaxFrmSubArray.java
+ slidingwindow.MaxFrmSubArray
+slidingwindow/LargestSubArray.java
+ slidingwindow.LargestSubArray
+slidingwindow/LongestSubString.java
+ slidingwindow.LongestSubString
