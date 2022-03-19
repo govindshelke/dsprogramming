@@ -6,7 +6,7 @@ import java.util.Map;
 public class LongestSubString {
 
     public static void main(String[] args) {
-       /* String str = "aabacbebebe";
+        /*String str = "aabacbebebe";
         int k = 3;
         int size = longestSubString(str,k);
         System.out.println("Result: "+size);*/
@@ -22,7 +22,6 @@ public class LongestSubString {
         int i=0;
         int j=0;
         Map<Character,Integer> freqMap = new HashMap<>();
-        int count =0;
         int max = 0;
         while(j<str.length()){
             //calculation
@@ -30,21 +29,21 @@ public class LongestSubString {
             if(freqMap.containsKey(ch)){
                 freqMap.put(ch,freqMap.get(ch)+1);
             }else{
-                count++;
                 freqMap.put(ch,1);
             }
 
-            while(j-i+1 > count){
+            while(j-i+1 > freqMap.size()){
                 char removechar = str.charAt(i);
                 freqMap.put(removechar,freqMap.get(removechar)-1);
                 if(freqMap.get(removechar) == 0){
-                    count--;
+                    freqMap.remove(removechar);
                 }
                 i++;
             }
 
-            if(count == j-i+1){
-                max = Math.max(max,count);
+            if(freqMap.size() == j-i+1){
+                System.out.println(">>"+str.substring(i,j+1));
+                max = Math.max(max,freqMap.size());
             }
             j++;
         }
@@ -56,7 +55,6 @@ public class LongestSubString {
         int i=0;
         int j=0;
         Map<Character,Integer> freqMap = new HashMap<>();
-        int count =0;
         int max = 0;
         while(j<str.length()){
             //calculation
@@ -64,19 +62,18 @@ public class LongestSubString {
             if(freqMap.containsKey(ch)){
                 freqMap.put(ch,freqMap.get(ch)+1);
             }else{
-                count++;
                 freqMap.put(ch,1);
             }
 
-            while(count > k){
+            while(freqMap.size() > k){
                 char removeChar = str.charAt(i);
                 freqMap.put(removeChar,freqMap.get(removeChar)-1);
                 if(freqMap.get(removeChar) == 0){
-                    count--;
+                   freqMap.remove(removeChar);
                 }
                 i++;
             }
-            if(count == k){
+            if(freqMap.size() == k){
                 System.out.println(str.substring(i,j+1));
                 max = Math.max(max,j-i+1);
             }

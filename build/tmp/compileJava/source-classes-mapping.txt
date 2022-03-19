@@ -53,3 +53,5 @@ slidingwindow/LargestSubArray.java
  slidingwindow.LargestSubArray
 slidingwindow/LongestSubString.java
  slidingwindow.LongestSubString
+slidingwindow/MinimumWindowSubString.java
+ slidingwindow.MinimumWindowSubString
